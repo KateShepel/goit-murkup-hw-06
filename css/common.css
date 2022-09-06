@@ -1,0 +1,341 @@
+/* вторичный цвет текста, так как их не много #212121 (все заголовки) */
+/* основной цвет текста, тот которого больше всего на странице #757575 */
+/* белый #FFFFFF (первая секция с крупным текстом)*/
+/* чёрный #000000 */
+/* акцент синий #2196F3 */
+
+/* вторичный цвет фона светлый #F5F4FA */
+/* вторичный цвет фона тёмный #2F303A */
+
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --primary-black-color: rgb(0, 0, 0);
+  --bg-dark-color: #2f303a;
+  --bg-light-color: #f5f4fa;
+  --border-color: #afb1b8;
+  --border-color-portfolio: #eeeeee;
+
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.button,
+.link,
+.item {
+  cursor: pointer;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  outline: 2px solid tomato;
+
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+
+  font-size: 14px;
+  line-height: 1.71;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+header {
+  margin: 0 auto;
+  border: 1px solid var(--bg-light-color);
+}
+/* Logo */
+.logo {
+  color: var(--primary-black-color);
+  font-family: Raleway, sans-serif;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+
+.logo > span {
+  color: var(--accent-color);
+}
+
+/* Отключает символьную точку в списке */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Шапка сайта */
+/* Site nav */
+.main-nav nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  margin-left: 93px;
+}
+
+.main-nav .contacts {
+  margin-left: auto;
+}
+
+.site-nav,
+.contacts {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  display: flex;
+}
+
+.site-nav .item {
+  margin-right: 50px;
+}
+
+.contacts .item {
+  margin-right: 30px;
+  display: flex;
+}
+
+.site-nav .item:last-child,
+.contacts .item:last-child {
+  margin-right: 0;
+}
+
+.site-nav .item {
+  display: block;
+  padding-top: 32px;
+}
+
+/* Или два кортких варианта для очистки крайних марджинов последних елементов
+Делается обязательно!!! */
+
+/* .site-nav .item:not(:last-child) {
+  margin-right: 50px;
+} */
+
+/* .site-nav .item + .item {
+  margin-left: 50px;
+} */
+
+.site-nav a {
+  color: var(--title-text-color);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--accent-color);
+  transition: color var(--animation);
+}
+
+.site-nav a.current::after {
+  content: " ";
+  display: block;
+  min-width: 48px;
+  min-height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+
+  margin-top: 28px;
+}
+
+.site-nav a.current {
+  color: var(--accent-color);
+}
+
+.contacts a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+/* .contacts a:hover,
+.contacts a:focus {
+  color: var(--accent-color);
+} */
+
+.item .icon-envelope,
+.item .icon-smartphone {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+.item:hover a {
+  color: var(--accent-color);
+  transition: color var(--animation);
+}
+.item:hover .icon-envelope,
+.item:focus .icon-envelope,
+.item:hover .icon-smartphone,
+.item:focus .icon-smartphone {
+  fill: var(--accent-color);
+  transition: fill var(--animation);
+}
+
+.contacts .item {
+  display: flex;
+  align-items: center;
+}
+
+/* .contacts .item::before {
+  display: inline-block;
+  content: "";
+  background-size: conain;
+  background-position: center;
+  margin-right: 10px;
+} */
+
+/* .icon-envelope::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../imagescss/envelope.svg);
+} */
+
+/* .icon-smartphone::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../imagescss/smartphone.svg);
+} */
+
+/* Footer */
+.footer {
+  background-color: var(--bg-dark-color);
+}
+
+.footer .container {
+  display: flex;
+}
+
+.guide {
+  outline: 1px solid red;
+}
+
+.footer .guide {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .address {
+  color: var(--primary-white-color);
+  font-style: normal;
+  display: block;
+}
+
+.footer.address .link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  display: block;
+}
+
+.footer .logo {
+  color: var(--primary-white-color);
+
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.webs {
+  padding-top: 72px;
+  padding-bottom: 100px;
+  padding-left: 72px;
+  outline: 1px solid red;
+}
+
+.webs h3 {
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-webs-link {
+  outline: 1px solid red;
+  display: flex;
+  height: 44px;
+  gap: 10px;
+}
+
+.footer-webs-link li {
+  outline: 1px solid blue;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+/* .footer-webs-link li {
+  display: block;
+  outline: 1px solid red;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+} */
+
+/* .footer-webs-link .icon-instagram::before {
+  background-image: url(../imagescss/instagramwhite.svg);
+} */
+
+/* .footer-webs-link .icon-twiter::before {
+  background-image: url(../imagescss/twitterwhite.svg);
+}
+
+.footer-webs-link .icon-facebook::before {
+  background-image: url(../imagescss/facebookwhite.svg);
+}
+
+.footer-webs-link .icon-linkedin::before {
+  background-image: url(../imagescss/linkedinwhite.svg);
+} */
+
+.footer-webs-link li:hover,
+.footer-webs-link li:focus {
+  background-color: var(--accent-color);
+  transition: background-color var(--animation);
+}

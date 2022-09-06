@@ -1,0 +1,132 @@
+button {
+  color: var(--title-text-color);
+  background-color: var(--bg-light-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+}
+
+button.nav:hover,
+button.nav:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  transition: color var(--animation), background-color var(--animation);
+}
+
+.button .container {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.button-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.button-nav li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button .nav {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 73px;
+  text-align: center;
+
+  border: 1px solid var(--bg-light-color);
+}
+
+h3 {
+  color: var(--title-text-color);
+  letter-spacing: 0.06em;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+
+  padding-top: 20px;
+  margin-bottom: 4px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.19;
+  padding-bottom: 20px;
+}
+
+/* .works li {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+} */
+
+.works .last-element {
+  margin-bottom: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Works */
+
+.our-works {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  padding-bottom: 94px;
+}
+
+.our-works li {
+  cursor: pointer;
+}
+
+.our-works li:hover,
+.our-works li:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow var(--animation);
+}
+
+.small-border {
+  padding-left: 24px;
+  border-left: 1px solid var(--border-color-portfolio);
+  border-right: 1px solid var(--border-color-portfolio);
+  border-bottom: 1px solid var(--border-color-portfolio);
+}
+
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.our-works li:hover .description {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform var(--animation), opacity var(--animation);
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform var(--animation), opacity var(--animation);
+  opacity: 0;
+
+  color: var(--primary-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  /* text-align: justify; */
+  /* padding: 63px, 24px; */
+
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+}
