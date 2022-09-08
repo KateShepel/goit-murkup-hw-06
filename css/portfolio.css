@@ -16,7 +16,7 @@ button.nav:focus {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   transition: color var(--animation), background-color var(--animation),
-    border-color var(--animation);
+    border-color var(--animation), box-shadow var(--animation);
 }
 
 .button .container {
