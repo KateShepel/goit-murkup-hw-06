@@ -22,16 +22,25 @@
   --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
-.button,
-.link,
+button,
+a,
 .item {
   cursor: pointer;
+}
+
+button {
+  border-style: none;
 }
 
 h2,
